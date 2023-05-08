@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+</head>
+<body>
+<h1>Start Page</h1>
+
+<form th:action="@{/findall}">
+  <button class="btn-danger" type="submit">Find All Movies</button>
+
+</form>
+<form th:action="@{/addmovie}">
+  <button class="btn-danger" type="submit">Add Movie</button>
+</form>
+<form th:action="@{/findgenres}">
+  <button class="btn-danger" type="submit">Get Genres</button>
+</form>
+
+
+
+</body>
+</html>

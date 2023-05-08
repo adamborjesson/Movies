@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+</head>
+<body>
+<table class="table table-striped">
+
+  <thead style="background-color: darkgray">
+
+  <tr>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>DIRECTOR</th>
+    <th>LENGTH</th>
+    <th>GENRE</th>
+
+  </tr>
+  </thead>
+  <tbody style="background-color: white;
+font-weight: bold; font-size: 20px;">
+  <tr th:each="movie : ${movielist}">
+    <td th:text="${movie.id}"></td>
+    <td th:text="${movie.title}"></td>
+    <td th:text="${movie.director}"></td>
+    <td th:text="${movie.length}"></td>
+    <td th:text="${movie.genre.type}"></td>
+    <td>
+      <a th:href="@{/deletemovie/{id}(id=${movie.id})}" class="btn-danger">Delete</a>
+      <a th:href="@{/updatemovie/{id}(id=${movie.id})}" class="btn-danger">Update</a>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+<a th:href="@{/}" style="text-decoration: none;font-size: 30px"> <---- Back to home page</a>
+</body>
+</html>

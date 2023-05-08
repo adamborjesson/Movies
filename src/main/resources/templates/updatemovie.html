@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update</title>
+</head>
+<body>
+  <form class="text-center" th:action="@{/saveupdate}" th:object="${movie}" method="post">
+    <div>
+      <input type="text" th:field="*{id}">
+    </div>
+
+    <div>
+      <input type="text" th:field="*{director}">
+    </div>
+
+    <div>
+      <label>Name</label>
+      <input type="text" th:field="*{length}">
+    </div>
+
+    <div>
+      <label>Title</label>
+      <input type="text" th:field="*{title}">
+    </div>
+
+    <div>
+      <label>Release</label>
+      <input type="text" th:field="*{yearOfRelease}">
+    </div>
+    <div>
+      <label>Release</label>
+      <input type="hidden" th:field="*{genre.type}">
+    </div>
+
+
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

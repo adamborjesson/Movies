@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Movie</title>
+</head>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update</title>
+  <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.1.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+<form class="text-center" th:action="@{/savemovie}" th:object="${movie}" method="post">
+  <br/>
+  <input style="border: black solid 3px" placeholder="Movie Name" required type="text" th:field="*{title}">
+  <input style="border: black solid 3px" placeholder="Director" required type="text" th:field="*{director}">
+  <input style="border: black solid 3px" placeholder="Release" required type="text" th:field="*{yearOfRelease}">
+  <input style="border: black solid 3px" placeholder="Length" required type="text" th:field="*{length}">
+  <input style="border: black solid 3px" placeholder="Genre" required type="text" th:field="*{genre.type}">
+
+  <br/>
+  <br/>
+  <button style="background-color: greenyellow; color: black; font-weight: bold" type="submit">Create</button>
+</form>
+
+<a th:href="@{/}" style="text-decoration: none;font-size: 30px"> <---- Back to home page</a>
+
+</body>
+</html>
